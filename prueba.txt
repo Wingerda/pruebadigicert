@@ -1,0 +1,50 @@
+{
+    "additionalInfo": "Dummy text", //Text - Nullable
+    "modality": "REMOTE", //Enum - Not null - (REMOTE, PRESENTIAL)
+    "type": "CORPORATE", //Enum - Not null - (CORPORATE)
+    "notification": { //Nullable
+        "subject": "Esto es una prueba", //Varchar(100) - Nullable
+        "message": "Por favor firmar los documentos", //Text - Nullable
+        "type": "EMAIL" //Varchar - Nullable
+    },
+    "callbackMails": [ //Nullable
+        "dsandoval@digicert.bo" //Varchar - Nullable
+    ],
+    "signatureLines": [ //Not null
+        {
+            "signatureGroups": [ //Not null
+                {
+                    "everyoneSigns": true, //Boolean - Not null
+                    "signingEntities": [ //Not null
+                        {
+                            "referenceCode": "normal-signer-1", //Varchar(255) - Nullable
+                            "signServiceType": "ONE_SHOT", //Enum - Not null - (ONE_SHOT, SIGN_BOX)
+                            "oneshotData": { //Nullable
+                                "firstName": "MIGUEL", //Varchar(100) - Nullable
+                                "surname1": "ADOLFO", //Varchar(100) - Nullable
+                                "surname2": "MEDINA", //Varchar(100) - Nullable
+                                "birthdate": "14/02/1996", //Date - Nullable - (dd/MM/yyyy)
+                                "dniType": "CI", //Enum - Nullable - (CI, CE)
+                                "dniExpeditionCountry": "BO", //Enum - Nullable - (BO)
+                                "dniExpeditionCity": "Santa Cruz",//Varchar(100) - Nullable
+                                "dni": "9786240", //Varchar(100) - Nullable
+                                "dniComplement": null, //Varchar(10) - Nullable
+                                "dniExpirationDate": "1/1/2025", //Date - Nullable - (dd/MM/yyyy)
+                                "nonExpiringDni": false, //Boolean - Nullable
+                                "taxNumber": null, //Varchar(100) - Nullable
+                                "email": "mmedina@digicert.bo", //Varchar - Nullable
+                                "phoneNumber": "+591-7555555", //Varchar - Nullable
+                                "residenceCountry": "BO", //Varchar(2) - Nullable - (ISO-3166)
+                                "residenceCity": "Santa Cruz", //Varchar(100) - Nullable
+                                "residenceAddress": "Cainco", //Varchar(100) - Nullable
+                                "editingRestrictionPolicy": "NONE", //Enum - Nullable - (NONE, IDENTIFICATION, IDENTIFICATION_AND_CONTACT)
+                                "flowModality": "CONTINUOUS" //Enum - Nullable - (CONTINUOUS, ON_HOLD_AFTER_IDENTITY_VALIDATION)
+                            },
+                            "signboxData": null //Nullable
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
